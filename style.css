@@ -605,11 +605,9 @@ img {
 }
 
 .rating__stars {
-  min-height: 20px;
-	overflow: hidden;
-	display: flex;
-  justify-content: center;
-  flex-direction: row-reverse;
+  overflow: hidden;
+	width: 100px;
+	margin: 0 auto;
 }
 
 .rating__stars:not(:checked) > input {
@@ -617,12 +615,14 @@ img {
 }
 
 .rating__stars:not(:checked) > label {
-	padding-left: 5px;
+  content: url("./img/stars/star-empty.svg");
+  float: right;
+	padding-right: 5px;
 	cursor: pointer;
 }
 
 .rating__stars:not(:checked) > label:before {
-	content:url("./img/stars/star-empty.svg");
+	content: url("./img/stars/star-empty.svg");
 }
 
 .rating__stars > input:checked ~ label {
@@ -631,7 +631,7 @@ img {
 
 .rating__stars:not(:checked) > label:hover,
 .rating__stars:not(:checked) > label:hover ~ label {
-	content:url("./img/stars/star-filled.svg");
+	content: url("./img/stars/star-filled.svg");
 }
 
 .rating__stars > input:checked + label:hover,
@@ -639,7 +639,7 @@ img {
 .rating__stars > input:checked ~ label:hover,
 .rating__stars > input:checked ~ label:hover ~ label,
 .rating__stars > label:hover ~ input:checked ~ label {
-	content:url("./img/stars/star-filled.svg");
+	content: url("./img/stars/star-filled.svg");
 }
 
 .signup__divider {
